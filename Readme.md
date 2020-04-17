@@ -21,6 +21,6 @@ La plataforma web ayudará en la economía de nuestro país al promoveer los neg
 ## Colaborar
 Si desea colaborar aportando al código abierto, tendrá que solicitar al administrador para: 
  
- 1 Tener en cuenta al desarrollador.
- 2 Tener opción de escritura al branch.
+  1. Tener en cuenta al desarrollador.
+  2. Tener opción de escritura al branch.
 
