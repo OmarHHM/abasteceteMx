@@ -1,4 +1,4 @@
-# ABASTECETE
+# ABASTÉCETE
 
 Abastecete es una plataforma web para ayudar a las personas en confinamiento ofrenciedoles la centralización de comercios de manera gratuita, la plataforma ofrece un medio de contacto entre el comprador y el comerciante.
 La plataforma web ayudará en la economía de nuestro país al promoveer los negocios locales, los comercios se podrán registrar de manera gratuita.
