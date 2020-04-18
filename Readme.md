@@ -23,4 +23,12 @@ Si desea colaborar aportando al código abierto, tendrá que solicitar al admini
  
   1. Tener en cuenta al desarrollador.
   2. Tener opción de escritura al branch.
+  
+## Instalación Técnica.
+### Nuestra plataforma web usa:
+ - PHP 7.4
+ - Laravel 7
+ - Mysql 
+ 
+  
 
