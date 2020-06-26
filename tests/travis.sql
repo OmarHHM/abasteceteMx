@@ -10,11 +10,11 @@ USE `supplier`;
 CREATE TABLE `addresses` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `id_user` bigint(20) UNSIGNED NOT NULL,
-  `adrress` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `adrress` varchar(500)  NOT NULL,
   `id_country` int(10) UNSIGNED NOT NULL,
   `id_state` int(10) UNSIGNED NOT NULL,
-  `neigborhood` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `postal_code` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `neigborhood` varchar(100)   NOT NULL,
+  `postal_code` varchar(10)   NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -26,7 +26,7 @@ INSERT INTO `addresses` (`id`, `id_user`, `adrress`, `id_country`, `id_state`, `
 
 CREATE TABLE `categories` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `description` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(100)  NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -39,8 +39,8 @@ INSERT INTO `categories` (`id`, `description`, `created_at`, `updated_at`) VALUE
 
 CREATE TABLE `countries` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `description` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `code` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(100)   NOT NULL,
+  `code` varchar(20)  NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -53,7 +53,7 @@ INSERT INTO `countries` (`id`, `description`, `code`, `created_at`, `updated_at`
 CREATE TABLE `sub__categories` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `idCategory` int(10) UNSIGNED NOT NULL,
-  `description` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(100)   NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -66,28 +66,28 @@ INSERT INTO `sub__categories` (`id`, `idCategory`, `description`, `created_at`, 
 
 CREATE TABLE `profiles` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `rfc` varchar(13) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `phoneH` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `phoneM` varchar(13) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `phoneO` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(50)  DEFAULT NULL,
+  `rfc` varchar(13)  DEFAULT NULL,
+  `phoneH` varchar(10)  DEFAULT NULL,
+  `phoneM` varchar(13)  DEFAULT NULL,
+  `phoneO` varchar(10)  DEFAULT NULL,
   `photo` blob DEFAULT NULL,
   `isBusiness` int(11) NOT NULL,
-  `contact_name` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `contact_phoneH` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `contact_phoneM` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `contact_email` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_name` varchar(200)  DEFAULT NULL,
+  `contact_phoneH` varchar(10) DEFAULT NULL,
+  `contact_phoneM` varchar(10)  DEFAULT NULL,
+  `contact_email` varchar(50)  DEFAULT NULL,
   `id_user` int(10) UNSIGNED NOT NULL,
-  `email` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `l_whats_app` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `l_facebook` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `l_twitter` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `l_instagram` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `l_whats_app` varchar(50)  DEFAULT NULL,
+  `l_facebook` varchar(50)  DEFAULT NULL,
+  `l_twitter` varchar(50) DEFAULT NULL,
+  `l_instagram` varchar(50)  DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `lastName1` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `lastName2` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lastName1` varchar(50)  DEFAULT NULL,
+  `lastName2` varchar(50)  DEFAULT NULL,
+  `description` varchar(1000)  DEFAULT NULL,
   `category_id` bigint(20) DEFAULT NULL,
   `subcategory_id` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -103,7 +103,7 @@ INSERT INTO `profiles` (`id`, `name`, `rfc`, `phoneH`, `phoneM`, `phoneO`, `phot
 
 CREATE TABLE `roles` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255)  NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -129,11 +129,11 @@ INSERT INTO `role_users` (`id`, `role_id`, `user_id`, `created_at`, `updated_at`
 
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255)  NOT NULL,
+  `email` varchar(255)  NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(255)  NOT NULL,
+  `remember_token` varchar(100)  DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
