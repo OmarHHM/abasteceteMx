@@ -23,6 +23,7 @@ install:
 
 before_script:
   - mysql -e 'CREATE DATABASE IF NOT EXISTS supplier;'
+  - mysql -u root --password="" < test/travis.sql
   - composer install
   - php artisan key:generate
 
