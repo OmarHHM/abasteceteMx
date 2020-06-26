@@ -13,17 +13,8 @@ env:
   global:
     - setup=stable
 
-before_install:
-  - travis_retry composer self-update
-
-install:
-  - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-dist --prefer-stable --no-interaction --no-suggest; fi
-  - if [[ $setup = 'normal' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-stable --no-suggest; fi
-
-sudo: false
-env:
-  global:
-    - setup=stable
+services:
+  - mysql
 
 before_install:
   - travis_retry composer self-update
@@ -33,10 +24,8 @@ install:
   - if [[ $setup = 'normal' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-stable --no-suggest; fi
 
 before_script:
-  - cp .env.travis .env
-  - mysql -e 'create database supplier_db;'
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS supplier;'
   - php artisan key:generate
-
 
 cache:
   directories:
@@ -45,4 +34,4 @@ cache:
 after_success:
   - php artisan -V
 notifications:
- email: your_email
+ email: omar78701@gmail.com
