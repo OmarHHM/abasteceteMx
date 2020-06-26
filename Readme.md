@@ -32,7 +32,6 @@ Si desea colaborar aportando al código abierto, tendrá que solicitar al admini
  
  
  
- [![Build Status](https://travis-ci.org/shahroznawaz/php-notifications.svg?branch=master)](https://travis -ci.org/ shahroznawaz/php-notifications)
- 
+ [![Build Status](https://travis-ci.org/shahroznawaz/php-notifications.svg?branch=master)]
   
 
