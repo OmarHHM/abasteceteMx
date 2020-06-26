@@ -92,13 +92,6 @@ CREATE TABLE `profiles` (
   `subcategory_id` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8  COLLATE=utf8_general_ci;
 
---
--- Volcado de datos para la tabla `profiles`
---
-
-INSERT INTO `profiles` (`id`, `name`, `rfc`, `phoneH`, `phoneM`, `phoneO`,  `isBusiness`, `contact_name`, `contact_phoneH`, `contact_phoneM`, `contact_email`, `id_user`, `email`, `l_whats_app`, `l_facebook`, `l_twitter`, `l_instagram`, `created_at`, `updated_at`, `lastName1`, `lastName2`, `description`, `category_id`, `subcategory_id`) VALUES
-(1, 'Carniceria don Pepe', PEPE960430HCR', '', '+525578995437', '',  0, 'Omar Hernandez Hernandez', NULL, '5578559234', 'omar78701@gmail.com', 1, 'servicios@servicios.com', 'https://api.whatsapp.com/send?phone=+525578559234', 'https://www.facebook.com/OmarHernande2', 'http:s', 'https:', NULL, '2020-04-18 00:59:59', '--', '--', 'Somos una empresa de mayoreo, distribución de Ropa para cabelleros. Hacemos entrega en todo el país, tenemos variedad de CARNE, RES, PUERCO, todo lo que necesite. Somo tu mejor opción.', 1, 1);
-
 
 
 CREATE TABLE `roles` (
@@ -141,3 +134,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'Admin ', 'admin@gmail.com', NULL, '$2y$10$6c6eO0c5LomqwweNSL.Pj.br3zgOnB5ePLA3AhXQXlo94o6L.indW', NULL, '2020-03-28 22:08:37', '2020-03-28 22:08:37');
+
+
+
+INSERT INTO `profiles` (`id`, `name`, `rfc`, `phoneH`, `phoneM`, `phoneO`,  `isBusiness`, `contact_name`, `contact_phoneH`, `contact_phoneM`, `contact_email`, `id_user`, `email`, `l_whats_app`, `l_facebook`, `l_twitter`, `l_instagram`, `created_at`, `updated_at`, `lastName1`, `lastName2`, `description`, `category_id`, `subcategory_id`) 
+VALUES (1, 'Carniceria don Pepe', 'PEPE960430HCR', '', '+525578995437', '',  0, 'Omar Hernandez', NULL, '5578559234', 'omar78701@gmail.com', 1, 'servicios@servicios.com', 'https://api.whatsapp.com/send?phone=+525586789234', 'https://www.facebook.com/OmarHernande2', 'http:s', 'https:', NULL, '2020-04-18 00:59:59', '--', '--', 'Somos una empresa de mayoreo, distribución de Ropa para cabelleros. Hacemos entrega en todo el país, tenemos variedad de CARNE, RES, PUERCO, todo lo que necesite. Somo tu mejor opción.', 1, 1);
