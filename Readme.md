@@ -1,4 +1,4 @@
-# ABASTÉCETE
+# ABASTÉCETE                                                                                     Build ![Build Status](https://travis-ci.org/OmarHHM/abastecete.svg?branch=master)
 
 Abastecete es una plataforma web para ayudar a las personas en confinamiento ofrenciedoles la centralización de comercios de manera gratuita, la plataforma ofrece un medio de contacto entre el comprador y el comerciante.
 La plataforma web ayudará en la economía de nuestro país al promoveer los negocios locales, los comercios se podrán registrar de manera gratuita.
@@ -29,9 +29,3 @@ Si desea colaborar aportando al código abierto, tendrá que solicitar al admini
  - PHP 7.4
  - Laravel 7
  - Mysql 
- 
- 
- 
- ## Response Build ![Build Status](https://travis-ci.org/shahroznawaz/php-notifications.svg?branch=master)
-  
-
