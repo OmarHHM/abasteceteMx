@@ -22,7 +22,6 @@ install:
   - if [[ $setup = 'normal' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-stable --no-suggest; fi
 
 before_script:
-  - mysql -e 'CREATE DATABASE IF NOT EXISTS supplier;'
   - mysql -u root --password="" < tests/travis.sql
   - composer install
   - php artisan key:generate
