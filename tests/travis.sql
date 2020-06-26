@@ -17,11 +17,11 @@ CREATE TABLE `addresses` (
   `postal_code` varchar(10)   NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_general_ci;
 
 
 INSERT INTO `addresses` (`id`, `id_user`, `adrress`, `id_country`, `id_state`, `neigborhood`, `postal_code`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Avenida Juarez', 1, 1, 'Colonia san angel', '67890', NULL, '2020-04-18 01:00:00'),
+(1, 1, 'Avenida Juarez', 1, 1, 'Colonia san angel', '67890', NULL, '2020-04-18 01:00:00');
 
 
 CREATE TABLE `categories` (
@@ -29,11 +29,11 @@ CREATE TABLE `categories` (
   `description` varchar(100)  NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_general_ci;
 
 
 INSERT INTO `categories` (`id`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'SUPERMERCADO', NULL, NULL),
+(1, 'SUPERMERCADO', NULL, NULL);
 
 
 
@@ -43,7 +43,7 @@ CREATE TABLE `countries` (
   `code` varchar(20)  NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_general_ci;
 
 
 INSERT INTO `countries` (`id`, `description`, `code`, `created_at`, `updated_at`) VALUES
@@ -56,11 +56,11 @@ CREATE TABLE `sub__categories` (
   `description` varchar(100)   NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_general_ci;
 
 
 INSERT INTO `sub__categories` (`id`, `idCategory`, `description`, `created_at`, `updated_at`) VALUES
-(1, 1, 'CARNES', NULL, NULL),
+(1, 1, 'CARNES', NULL, NULL);
 
 
 
@@ -90,7 +90,7 @@ CREATE TABLE `profiles` (
   `description` varchar(1000)  DEFAULT NULL,
   `category_id` bigint(20) DEFAULT NULL,
   `subcategory_id` bigint(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_general_ci;
 
 --
 -- Volcado de datos para la tabla `profiles`
@@ -106,11 +106,11 @@ CREATE TABLE `roles` (
   `name` varchar(255)  NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_general_ci;
 
 
 INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(1, 'admin', '2020-03-28 22:08:34', '2020-03-28 22:08:34'),
+(1, 'admin', '2020-03-28 22:08:34', '2020-03-28 22:08:34');
 
 
 CREATE TABLE `role_users` (
@@ -119,11 +119,11 @@ CREATE TABLE `role_users` (
   `user_id` int(10) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_general_ci;
 
 
 INSERT INTO `role_users` (`id`, `role_id`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, NULL, NULL),
+(1, 1, 1, NULL, NULL);
 
 
 
@@ -136,8 +136,8 @@ CREATE TABLE `users` (
   `remember_token` varchar(100)  DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8_general_ci;
 
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Admin ', 'admin@gmail.com', NULL, '$2y$10$6c6eO0c5LomqwweNSL.Pj.br3zgOnB5ePLA3AhXQXlo94o6L.indW', NULL, '2020-03-28 22:08:37', '2020-03-28 22:08:37'),
+(1, 'Admin ', 'admin@gmail.com', NULL, '$2y$10$6c6eO0c5LomqwweNSL.Pj.br3zgOnB5ePLA3AhXQXlo94o6L.indW', NULL, '2020-03-28 22:08:37', '2020-03-28 22:08:37');
